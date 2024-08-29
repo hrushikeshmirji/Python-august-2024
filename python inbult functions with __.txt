@@ -1,0 +1,87 @@
+python inbult functions with __
+
+In Python, *dunder methods* (short for "double underscore" methods) are special methods that allow you to define the behavior of your objects in various contexts. These methods are integral to Python's object-oriented programming and enable classes to interact with built-in functions and operators.
+
+## Common Dunder Methods
+
+Here are some of the most commonly used dunder methods, categorized by their functionality:
+
+*Initialization and Construction*
+- __init__(self, ...): Initializes a new object.
+- __new__(cls, ...): Creates a new instance of a class.
+- __del__(self): Called when an object is about to be destroyed.
+
+*String Representation*
+- __str__(self): Defines the informal string representation of an object, used by print().
+- __repr__(self): Defines the official string representation, used by repr().
+
+*Container Methods*
+- __len__(self): Called by the built-in len() function.
+- __getitem__(self, key): Defines behavior for indexing (e.g., obj[key]).
+- __setitem__(self, key, value): Defines behavior for setting an item (e.g., obj[key] = value).
+- __delitem__(self, key): Defines behavior for deleting an item (e.g., del obj[key]).
+
+*Arithmetic and Comparison Operators*
+- __add__(self, other): Defines behavior for addition (e.g., obj1 + obj2).
+- __sub__(self, other): Defines behavior for subtraction.
+- __mul__(self, other): Defines behavior for multiplication.
+- __eq__(self, other): Defines behavior for equality comparison (e.g., obj1 == obj2).
+- __lt__(self, other): Defines behavior for less-than comparison.
+
+*Callable Objects*
+- __call__(self, ...): Allows an instance of a class to be called as a function.
+
+*Context Managers*
+- __enter__(self): Defines behavior for entering a context (used with the with statement).
+- __exit__(self, exc_type, exc_value, traceback): Defines behavior for exiting a context.
+
+## Comprehensive List of Dunder Methods
+
+While the above methods are commonly used, there are many more dunder methods available in Python. Here’s a more extensive list:
+
+- *Object Creation and Destruction*
+  - __new__, __init__, __del__
+
+- *String Representation*
+  - __str__, __repr__, __bytes__, __format__
+
+- *Container Methods*
+  - __len__, __getitem__, __setitem__, __delitem__, __iter__, __contains__
+
+- *Arithmetic Operations*
+  - __add__, __sub__, __mul__, __truediv__, __floordiv__, __mod__, __pow__
+
+- *Augmented Assignment*
+  - __iadd__, __isub__, __imul__, __itruediv__, __ifloordiv__, __imod__, __ipow__
+
+- *Comparison Operations*
+  - __eq__, __ne__, __lt__, __le__, __gt__, __ge__
+
+- *Unary Operations*
+  - __neg__, __pos__, __invert__, __abs__
+
+- *Callable Objects*
+  - __call__
+
+- *Context Management*
+  - __enter__, __exit__
+
+- *Type and Class Checks*
+  - __instancecheck__, __subclasscheck__
+
+- *Miscellaneous*
+  - __hash__, __bool__, __sizeof__, __getattr__, __setattr__, __delattr__
+
+This extensive set of methods allows Python developers to customize their classes to behave like built-in types, enabling rich interactions with Python's syntax and built-in functions[1][2][4][5]. 
+
+Understanding and implementing these dunder methods can significantly enhance the functionality and usability of your custom classes in Python.
+
+Citations:
+[1] List of all Python dunder methods? - Reddit https://www.reddit.com/r/Python/comments/br9ok2/list_of_all_python_dunder_methods/
+[2] 5 Python Magic Methods or Dunder Methods to Know | Built In https://builtin.com/data-science/dunder-methods-python
+[3] Python special methods | Python For Starters https://pythonforstarters.solomonmarvel.com/object-oriented-programming-in-python/python-special-methods
+[4] Python's Magic Methods: Leverage Their Power in Your Classes https://realpython.com/python-magic-methods/
+[5] Special Method Names - Dive Into Python 3 https://diveintopython3.net/special-method-names.html
+[6] Special Method Names - Dive Into Python 3 http://people.ubuntu.com/~kelemeng/.ufp3/special-method-names.html
+[7] How can i get a list of all special methods available? - Stack Overflow https://stackoverflow.com/questions/1962559/how-can-i-get-a-list-of-all-special-methods-available
+[8] Python Built-in Functions - W3Schools https://www.w3schools.com/python/python_ref_functions.asp
